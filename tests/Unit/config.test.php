@@ -1,7 +1,7 @@
 <?php 
 
 return [
-	'dsn'=>'mysql:host=localhost;dbname=mvc_basics',
+	'dsn'=>'mysql:host=localhost;dbname=testdb',
 	'user'=>'root',
 	'paswd'=>'root',
 	'options'=>[

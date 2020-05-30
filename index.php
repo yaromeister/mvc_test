@@ -1,20 +1,16 @@
 <?php 
-require_once 'Connection.php';
-require_once 'CsvFile.php';
-require_once 'User.php';
-require_once 'View.php';
-require_once 'Controller.php';
+require 'bootstrap.php';
+include 'app/Views/header.view';
+include 'app/Views/form.view';
+
+if($_SERVER['REQUEST_METHOD']=="GET"){
+	
+	$controller->show();
+}
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+	$controller->insert();
+}
 
 
-
-
-$pdo = Connection::make();
-
-
-$user = new User;
-$model = new CsvFile($pdo, $user);
-
-
-echo View::output($model);
-
-
+include 'app/Views/footer.view';

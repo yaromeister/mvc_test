@@ -1,0 +1,24 @@
+<table>
+			<tr>
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Birthday</th>
+				<th>ChangedAt</th>
+				<th>Desctiption</th>
+			</tr>
+			
+
+		<?php foreach($data as $row): ?>
+
+						<tr>
+							<td> <?= $row["id"] ?> </th>
+							<td> <?= $row["firstName"] ?> </th>
+							<td> <?= $row["lastName"] ?> </th>
+							<td> <?= $row["birthday"] ?> </th>
+							<td> <?= $row["changedAt"] ?> </th>
+							<td> <?= $row["description"] ?> </th>
+						</tr>
+		
+		<?php endforeach;?>
+</table>
